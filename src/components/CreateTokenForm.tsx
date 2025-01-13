@@ -34,6 +34,7 @@ import Warning from './Warning';
 import clsx from 'clsx/lite';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { MassaUnits } from '@massalabs/web3-utils';
 
 const CreateTokenForm = () => {
   const [showModal, setShowModal] = useState(false);
@@ -301,11 +302,15 @@ const CreateTokenForm = () => {
               your coin less attractive to users.'
               />
             )}
+            <span className='text-xs'>
+              20 $MAS will be required for token deployment
+            </span>
             <Button
               text='Create coin'
               variant='contained'
               disabledText={
-                (masBalance < amountToBuy && 'Insufficient balance') ||
+                (masBalance + 20n * MassaUnits.oneMassa < amountToBuy &&
+                  'Insufficient balance') ||
                 (amountOut > initialTokenLiquidityInCurve &&
                   'Amount too high') ||
                 undefined

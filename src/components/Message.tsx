@@ -54,7 +54,7 @@ const Message = ({ user, message, date, img, tokenAddress }: MessageProps) => {
           ) : null}
         </div>
         <div className='rounded bg-gray-800 px-2 py-1'>
-          <p className='text-white'>{message}</p>
+          <p className='break-words text-white'>{message}</p>
         </div>
       </div>
     </div>

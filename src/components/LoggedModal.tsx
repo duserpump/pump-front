@@ -13,7 +13,7 @@ import { routeNames } from 'routes';
 import { getRoute } from 'utils/methods';
 import Button from './Button';
 import EditProfileModal from './EditProfileModal';
-import { defaultProfileURI } from 'utils/config';
+import { defaultProfileURI, faucetSC } from 'utils/config';
 import { UserWrapperContext } from 'context/User';
 import FaucetModal from './FaucetModal';
 import Dropdown from './Dropdown';
@@ -21,6 +21,8 @@ import Dropdown from './Dropdown';
 const LoggedModal = () => {
   const [showEditProfileModal, setShowEditProfileModal] = useState(false);
   const [showFaucetModal, setShowFaucetModal] = useState(false);
+
+  const hasFaucet = faucetSC !== '';
 
   const { user } = useContext(UserWrapperContext);
   const {
@@ -100,11 +102,13 @@ const LoggedModal = () => {
                 text='Edit profile'
                 variant='text'
               />
-              {/* <Button
-                text='Faucet 👛'
-                variant='text'
-                onClick={() => setShowFaucetModal(true)}
-              /> */}
+              {hasFaucet && (
+                <Button
+                  text='Faucet 👛'
+                  variant='text'
+                  onClick={() => setShowFaucetModal(true)}
+                />
+              )}
             </div>
             {showEditProfileModal && (
               <EditProfileModal

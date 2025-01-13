@@ -29,7 +29,6 @@ export const useSendTransaction = ({
     if (success && onTxConfirmed) {
       onTxConfirmed();
     }
-    // eslint-disable-line react-hooks/exhaustive-deps
   }, [success]);
 
   const submitTx = async () => {

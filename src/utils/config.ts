@@ -23,10 +23,18 @@ export const FEATURE_FLAGS = {
   PAUSE_SCREEN: getEnvVariable('VITE_PAUSE_SCREEN') === 'true'
 };
 
-export const factorySC = 'AS1fu1DMTxKohuuXKB9WYjJURvBEbiQyJZ3TWT4uVoYRqfgPLRAk';
-export const deployerSC =
-  'AS12fGDZbe8aEPnUsPeHWyehppxGELn2nJ9XeuFx7NeC2cQWD9W1K';
-export const faucetSC = 'AS12ruRnA87U7DTbVV4adGm8G8JRVk31MUgxmj8EC3gyA3ULzrEAU';
+export const factorySC = {
+  0: 'AS1BU12yT6f9d95jbut1B1dUkpbwqrKuW3TErh9bFa1TgZ5TwFQv',
+  1: 'AS1fu1DMTxKohuuXKB9WYjJURvBEbiQyJZ3TWT4uVoYRqfgPLRAk'
+}[CHAIN_ID];
+export const deployerSC = {
+  0: 'AS1UQk1E1fEwBehodN1dw7ZzRc49b6ohgwQYwbcRjekTH2v1pNDC',
+  1: 'AS12fGDZbe8aEPnUsPeHWyehppxGELn2nJ9XeuFx7NeC2cQWD9W1K'
+}[CHAIN_ID];
+export const faucetSC = {
+  0: 'AS12ruRnA87U7DTbVV4adGm8G8JRVk31MUgxmj8EC3gyA3ULzrEAU',
+  1: ''
+}[CHAIN_ID];
 
 export const EXPLORER =
   NETWORK === 'mainnet'
