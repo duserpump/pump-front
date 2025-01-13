@@ -100,11 +100,11 @@ const LoggedModal = () => {
                 text='Edit profile'
                 variant='text'
               />
-              <Button
+              {/* <Button
                 text='Faucet 👛'
                 variant='text'
                 onClick={() => setShowFaucetModal(true)}
-              />
+              /> */}
             </div>
             {showEditProfileModal && (
               <EditProfileModal
