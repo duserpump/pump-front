@@ -24,16 +24,13 @@ const TutorialModal = ({ showModal, setShowModal }: ModalProps) => {
       </div>
       <div className='flex flex-col gap-4'>
         <div>step 1: pick a coin that you like</div>
-        <div> step 2: buy the coin on the bonding curve</div>
-        <div> step 3: sell at any time to lock in your profits or losses</div>
+        <div>step 2: buy the coin on the bonding curve</div>
+        <div>step 3: sell at any time to lock in your profits or losses</div>
         <div>
-          {' '}
-          step 4: when enough people buy on the bonding curve it reaches a
-          market cap of $69k
+          step 4: when enough people buy on the bonding curve the coin is ready
+          to be transfered to Dusa
         </div>
-        <div>
-          step 5: $12k of liquidity is then deposited in Dusa and burned
-        </div>
+        <div>step 5: liquidity is then deposited on Dusa</div>
       </div>
       <br />
 
